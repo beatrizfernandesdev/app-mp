@@ -1,0 +1,35 @@
+body {
+  height: 95vh;
+}
+
+header {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+header img {
+  width: 10rem;
+}
+
+section#section-btn-comecar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button#btn-comecar {
+  display: flex;
+  align-items: center;
+  font-family: var(--fonte-secundaria);
+  font-size: var(--text-2xl);
+  color: var(--cor-nude);
+  background-color: var(--cor-marrom);
+  padding: 0.5rem 2rem;
+  border: none;
+  letter-spacing: 3px;
+  border-radius: 28px;
+}
