@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "La Monarchie";
+  src: url(../font/La\ Monarchie\ de\ Saint\ Ombre.ttf) format("truetype");
+}
 
 :root {
-  --cor-nude: #f6ece5;
+  --cor-nude: #ffcfac;
   --cor-marrom: #7a462e;
 
   /*escala de tamanhos fonte*/
@@ -14,8 +18,8 @@
   --text-3xl: 4rem;
 
   /*fontes*/
-  --fonte-principal: "Gwendolyn", cursive;
-  --fonte-secundaria: "Passion One", sans-serif;
+  --fonte-principal: "La Monarchie", cursive;
+  --fonte-secundaria: "Outfit", sans-serif;
 }
 
 * {
@@ -30,38 +34,37 @@ body {
   background-color: var(--cor-nude);
 }
 
-/*fontes
+/***********************************************************     fontes      **************************************/
 
 .font-principal-normal {
-  font-family: "Gwendolyn", cursive;
+  font-family: "La Monarchie", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
 .font-principal-bold {
-  font-family: "Gwendolyn", cursive;
+  font-family: "La Monarchie", cursive;
   font-weight: 700;
   font-style: normal;
 }
 
 .fonte-secundaria-normal {
-  font-family: "Passion One", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .fonte-secundaria-bold {
-  font-family: "Passion One", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .fonte-secundaria-bolder {
-  font-family: "Passion One", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
-********************************************************/
 
 /*base de tamanhos para textos e tipos*/
 
@@ -109,6 +112,7 @@ p {
   font-family: var(--fonte-secundaria);
   font-size: var(--text-sm);
   line-height: 1.6;
+  text-indent: 20px;
 }
 
 span {

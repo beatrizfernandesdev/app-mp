@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "La Monarchie";
+  src: url(../font/La\ Monarchie\ de\ Saint\ Ombre.ttf) format("truetype");
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -45,6 +50,9 @@ header img {
 
 /* TÍTULO */
 header h1 {
+  font-family: "La Monarchie";
+  color: var(--cor-marrom);
+  font-size: 10rem;
   text-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
 }
 
@@ -109,7 +117,7 @@ button#btn-comecar {
     height: 45vh;
   }
   header h1 {
-    font-size: 3rem;
+    font-size: 8rem;
   }
 
   header h2 {

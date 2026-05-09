@@ -1,10 +1,12 @@
 /* HERO */
-
+body {
+  background-color: #d3aa98;
+}
 .hero {
   position: relative;
 
   width: 100%;
-  height: 380px;
+  height: 70vh;
 
   padding: 60px;
 
@@ -15,9 +17,9 @@
 
   overflow: hidden;
 
-  background-image: url("../assets/background-paginaprincipal.jpg");
+  background-image: url("../assets/background-paginaprincipal.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position-x: center;
 }
 
 /* ESCURECE A IMAGEM */
@@ -34,61 +36,13 @@
   );
 }
 
-/* CONTEÚDO */
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-
-  max-width: 500px;
-
-  color: white;
-}
-
-.hero-tag {
-  display: inline-block;
-
-  margin-bottom: 18px;
-
-  /*  padding: 8px 16px;
-
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.15);
-
-  backdrop-filter: blur(10px);*/
-
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.hero-content h1 {
-  font-size: 64px;
-  line-height: 1.05;
-
-  margin-bottom: 20px;
-
-  font-weight: 700;
-}
-
-.hero-content p {
-  font-size: 24px;
-
-  color: rgba(255, 255, 255, 0.9);
-}
-
 /*section one*/
 .tributes {
   position: relative;
-
   margin: -60px 20px 0;
-
   background: #fff;
-
   border-radius: 40px 40px 0 0;
-
   padding: 70px 60px;
-
   z-index: 10;
 }
 
@@ -102,24 +56,6 @@
   gap: 30px;
 
   margin-bottom: 50px;
-}
-
-.tributes-text span {
-  color: #ff4f7b;
-
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.tributes-text h2 {
-  font-size: 52px;
-
-  line-height: 1.1;
-
-  margin: 18px 0;
-
-  color: #1d1d1d;
 }
 
 .tributes-text p {
@@ -158,92 +94,81 @@
 
 /* CARDS */
 
+/* ESCURECE A IMAGEM */
+
+.overlayCard {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 6%;
+  background: linear-gradient(
+    90deg,
+    rgba(60, 0, 10, 0.3) -0%,
+    rgba(60, 0, 10, 0.2) 40%,
+    rgba(60, 0, 10, 0.1) 100%
+  );
+}
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
 
 .card {
+  position: relative;
   background: #fff;
-
   border: 1px solid #ffe5ea;
-
   border-radius: 28px;
-
   padding: 30px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-
   transition: 0.3s;
 }
 
+#cardOne {
+  background-image: url(../assets/photo-card-1.jpeg);
+  background-size: cover;
+  height: 50vh;
+  background-position-y: 27%;
+}
+
+#cardTwo {
+  background-image: url(../assets/photo-card-2.jpeg);
+  background-size: cover;
+  height: 50vh;
+  background-position-y: 27%;
+}
 .card:hover {
   transform: translateY(-6px);
 }
 
-.quote {
-  font-size: 60px;
-
-  color: #ff7a9b;
-
-  margin-bottom: 10px;
-}
-
 .card p {
-  color: #333;
+  text-indent: 0;
+  position: relative;
+
+  z-index: 10;
+
+  color: #fff;
 
   font-size: 22px;
 
   line-height: 1.6;
 
-  min-height: 180px;
+  top: 40%;
 }
 
-/* FOOTER */
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-top: 30px;
+#cardOne p {
+  text-align: right;
+  width: 50%;
+  left: 50%;
 }
 
-.user {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
+#cardTwo p {
+  text-align: left;
+  width: 50%;
+  left: 0%;
 }
 
-.user img {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-
-  object-fit: cover;
-}
-
-.user strong {
-  display: block;
-
-  font-size: 14px;
-}
-
-.user span {
-  color: #777;
-
-  font-size: 13px;
-}
-
-.card-footer small {
-  color: #ff4f7b;
-
-  font-size: 14px;
-}
 /***********************************************************************************************************************************************/
 /**************************************************************** BANNER FINAL *****************************************************************/
 
@@ -264,123 +189,19 @@
 
   gap: 40px;
 
-  background: linear-gradient(135deg, #7a001c 0%, #b31245 50%, #ff4f7b 100%);
-}
-/**********************************************************************************************************************************************************/
-/***************************************************************** EFEITO DE FUNDO ************************************************************************/
-
-.final-banner::before {
-  content: "";
-
-  position: absolute;
-
-  width: 300px;
-  height: 300px;
-
-  right: -80px;
-  bottom: -80px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  filter: blur(10px);
-}
-
-/* TEXTO */
-
-.final-content {
-  position: relative;
-  z-index: 2;
-
-  color: white;
-
-  max-width: 500px;
-}
-
-.final-content span {
-  display: inline-block;
-
-  margin-bottom: 16px;
-
-  letter-spacing: 1px;
-
-  font-size: 14px;
-
-  opacity: 0.8;
-}
-
-.final-content h2 {
-  font-size: 54px;
-
-  line-height: 1.1;
-
-  margin-bottom: 20px;
-}
-
-.final-content p {
-  font-size: 20px;
-
-  line-height: 1.6;
-
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* BOTÃO */
-
-.final-action {
-  position: relative;
-  z-index: 2;
-}
-
-.final-action button {
-  border: none;
-
-  background: white;
-
-  color: #d81b60;
-
-  padding: 22px 34px;
-
-  border-radius: 22px;
-
-  font-size: 18px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.final-action button:hover {
-  transform: translateY(-4px);
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-/**************************************************************************************************************************************************/
-/*********************************************************************** RESPONSIVO ***************************************************************/
-
-@media (max-width: 768px) {
-  .hero {
-    height: 320px;
-    padding: 30px;
-  }
-
-  .hero-content h1 {
-    font-size: 42px;
-  }
-
-  .hero-content p {
-    font-size: 18px;
-  }
+  background: linear-gradient(
+    50deg,
+    rgba(211, 170, 152, 0.5),
+    rgba(211, 170, 152, 0.3),
+    rgba(211, 170, 152, 0.1)
+  );
 }
 
 /**********************************************************************************************************************************************/
 /******************************************************************* BOTÃO VOLTAR************************************************************ */
 
 .back-button {
-  margin: 0 60px 50px;
+  margin: 50px 60px;
 
   border: none;
 
@@ -411,9 +232,11 @@
 /******************************************************************* FOOTER *******************************************************************/
 
 .footer {
-  background: linear-gradient(135deg, #640016 0%, #8d1034 50%, #c2185b 100%);
+  background-image: url(../assets/background-footer.jpeg);
 
-  color: white;
+  background-size: cover;
+
+  background-position: center;
 
   padding: 70px 60px 30px;
 
@@ -422,26 +245,27 @@
   position: relative;
 
   overflow: hidden;
+
+  height: 100%;
 }
 
 /* EFEITO VISUAL */
 
 .footer::before {
   content: "";
-
   position: absolute;
-
-  width: 350px;
-  height: 350px;
-
-  right: -100px;
-  top: -100px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.06);
-
-  filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    150deg,
+    rgba(211, 170, 152, 1),
+    rgba(211, 170, 152, 0.2),
+    rgba(211, 170, 152, 0.1)
+  );
+  z-index: 2;
 }
 
 /* TOPO */
@@ -459,76 +283,43 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* BRAND */
-
-.footer-brand {
-  max-width: 400px;
+.footer-top p {
+  text-shadow: rgba(0, 0, 0, 1);
+  color: rgb(117, 117, 117);
+  font-size: var(--text-xl);
+  text-indent: 0px;
 }
 
-.footer-brand h3 {
-  font-size: 38px;
+/**************************************************************************************************************************************************/
+/*********************************************************************** RESPONSIVO ***************************************************************/
 
-  margin-bottom: 18px;
+@media (min-width: 900px) {
+  .hero {
+    height: 80vh;
+    padding: 30px;
+    background-position-y: -90px;
+  }
 }
+/*************************************************************************************************/
+/******************************* daqui para baixo são 'MAX-WIDTH' ********************************/
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    padding: 30px;
+  }
 
-.footer-brand p {
-  line-height: 1.7;
+  /**********************************   cards *********************************************/
+  #cardOne p {
+    text-align: right;
+    width: 70%;
+    left: 30%;
+  }
 
-  color: rgba(255, 255, 255, 0.8);
-
-  font-size: 17px;
-}
-
-/* LINKS */
-
-.footer-links {
-  display: flex;
-
-  gap: 60px;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-
-  gap: 14px;
-}
-
-.footer-column strong {
-  margin-bottom: 10px;
-
-  font-size: 18px;
-}
-
-.footer-column a {
-  color: rgba(255, 255, 255, 0.75);
-
-  text-decoration: none;
-
-  transition: 0.3s;
-}
-
-.footer-column a:hover {
-  color: white;
-
-  transform: translateX(4px);
-}
-
-/* PARTE DE BAIXO */
-
-.footer-bottom {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-top: 28px;
-
-  color: rgba(255, 255, 255, 0.7);
-
-  font-size: 14px;
+  #cardTwo p {
+    text-align: left;
+    width: 70%;
+    left: 0%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -573,7 +364,7 @@
 
   /************************btn voltar*************************/
   .back-button {
-    margin: 0 20px 40px;
+    margin: 40px 20px;
 
     width: calc(100% - 40px);
   }
@@ -604,5 +395,19 @@
 
   .footer-brand h3 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  #cardOne p {
+    text-align: right;
+    width: 70%;
+    left: 30%;
+  }
+
+  #cardTwo p {
+    text-align: left;
+    width: 70%;
+    left: 0%;
   }
 }
